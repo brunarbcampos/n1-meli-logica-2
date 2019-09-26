@@ -13,14 +13,16 @@ var produtoSelecionado =  produtos[posicao];
 
 var porcentagem = (validade * 100) / produtoSelecionado.tempoDeValidade;
 
-if (porcentagem == 2){
+if (porcentagem <= 2){
     console.log("Descartar produto, muito proximo de vencer") 
 }
 
-else if (porcentagem < 10 && produtos.Congelado == false){
+/*ouuuuuuu else if (porcentagem < 5 && !produtos.Congelado  o "!" é para não */
+else if (porcentagem <= 10 && produtos.Congelado == false){
     console.log("Desconto!  Produto não congelado e próximo da validade")
 }
 
+/*else if (porcentagem < 5 && produtos.Congelado (sem o true funciona tb)*/
 else if (porcentagem < 5 && produtos.Congelado == true){
     console.log("Desconto! Produto congelado e próximo da validade")
 }
